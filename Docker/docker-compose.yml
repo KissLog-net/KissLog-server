@@ -1,0 +1,56 @@
+version: "3.7"
+networks:
+  default:
+    name: kisslog-net
+    driver_opts:
+      com.docker.network.driver.mtu: 1380
+
+services:
+  backend:
+    image: catalingavan/kisslog.backend:4.0.0
+    container_name: kisslog.backend.dev
+    restart: unless-stopped
+    volumes:
+      - ./backend.appsettings.json:/app/appsettings.json
+      - ./backend.KissLog.json:/app/Configuration/KissLog.json
+    ports:
+      - "44088:80"
+    links:
+      - "mongodb"
+
+  frontend:
+    image: catalingavan/kisslog.frontend:4.0.0
+    container_name: kisslog.frontend.dev
+    restart: unless-stopped
+    volumes:
+      - ./frontend.appsettings.json:/app/appsettings.json
+      - ./frontend.KissLog.json:/app/Configuration/KissLog.json
+    ports:
+      - "44080:80"
+    links:
+      - "backend"
+      - "mariadb"
+
+  mongodb:
+    image: mongo:6.0.4
+    container_name: kisslog.mongodb.dev
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+
+  mariadb:
+    image: mariadb:10.8
+    container_name: kisslog.mariadb.dev
+    restart: unless-stopped
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: KissLog_Frontend_Dev
+
+volumes:
+  mariadb-data:
+  mongo-data:
+  mongo-config:
+

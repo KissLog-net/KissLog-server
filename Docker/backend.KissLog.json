@@ -1,0 +1,201 @@
+{
+  "KissLogBackend.BasicAuth.Password": "_This_Password_Should_Be_Replaced_",
+  "KissLogBackendUrl": "http://kisslog.backend.dev",
+  "KissLogFrontendUrl": "http://kisslog.frontend.dev",
+  "Database": {
+    "Provider": "MongoDb",
+    "MongoDb": {
+      "ConnectionString": "mongodb://kisslog.mongodb.dev:27017",
+      "DatabaseName": "KissLogDev"
+    }
+  },
+  "Files": {
+    "Provider": "MongoDb",
+    "MaximumFileSizeInBytes": 2097152
+  },
+  "CreateRequestLog": {
+    "SaveInputStreamAsFileIfLengthGte": 5000,
+    "Ignore": {
+      "UrlPathPatterns": [
+        "(?si).js$",
+        "(?si).css$",
+        "(?si).map$",
+        "(?si).bmp$",
+        "(?si).dib$",
+        "(?si).gif$",
+        "(?si).svg$",
+        "(?si).jpe$",
+        "(?si).jpeg$",
+        "(?si).jpg$",
+        "(?si).png$",
+        "(?si).pnz$",
+        "(?si).ico$",
+        "(?si).txt$",
+        "(?si).xml$",
+        "(?si).php$",
+        "(?si).ttf"
+      ],
+      "ResponseContentTypePatterns": [
+        "(?si)^application/javascript",
+        "(?si)^application/ecmascript",
+        "(?si)^application/x-ecmascript",
+        "(?si)^application/x-javascript",
+        "(?si)^text/javascript",
+        "(?si)^text/ecmascript",
+
+        "(?si)^text/css",
+        "(?si)^image/",
+        "(?si)^audio/",
+        "(?si)^video/",
+        "(?si)^application/ogg",
+
+        "(?si)^application/font-",
+        "(?si)^application/x-font-",
+        "(?si)^application/vnd-"
+      ]
+    },
+    "Obfuscate": {
+      "IsEnabled": true,
+      "ObfuscateInputStream": false,
+      "Placeholder": "<obfuscated>",
+      "Patterns": [ "(?si)pass" ]
+    },
+    "Truncate": {
+      "Files": {
+        "Limit": 6
+      },
+      "LogMessages": {
+        "Limit": 100,
+        "MessageMaxLength": 10000
+      },
+      "Exceptions": {
+        "Limit": 6,
+        "ExceptionMessageMaxLength": 500
+      },
+      "CustomProperties": {
+        "Limit": 10,
+        "KeyMaxLength": 20,
+        "ValueMaxLength": 100
+      },
+      "Keywords": {
+        "Limit": 6,
+        "KeywordMinLength": 5,
+        "KeywordMaxLength": 30
+      },
+      "RequestHeaders": {
+        "Limit": 20,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      },
+      "RequestCookies": {
+        "Limit": 5,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 100
+      },
+      "RequestQueryString": {
+        "Limit": 30,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      },
+      "RequestFormData": {
+        "Limit": 30,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      },
+      "RequestServerVariables": {
+        "Limit": 30,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      },
+      "RequestClaims": {
+        "Limit": 30,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      },
+      "ResponseHeaders": {
+        "Limit": 30,
+        "KeyMaxLength": 100,
+        "ValueMaxLength": 1000
+      }
+    },
+    "Throttle": {
+      "Rules": [
+        {
+          "IsEnabled": false,
+          "Limits": [
+            {
+              "StatusCodeLt": 600,
+              "RequestLimit": 1,
+              "IntervalInSeconds": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "UrlTokenization": {
+    "IgnoreTokenizationUrlPathPatterns": [ "(?si)^\/[0-9]+$" ],
+    "PathComponentTokenization": {
+      "Characters": [ "%", " ", ":", ",", ";", "+", "%", "&", "#", "(", ")", "@", "=", "<", ">", "{", "}", "\"", "'" ],
+      "Patterns": [ "(?si)(?:\\D*\\d){3}" ]
+    }
+  },
+  "TimeToLive": {
+    "AlertDefinitionInvocation": {
+      "Days": 30
+    },
+    "ApplicationAlert": {
+      "Days": 7
+    },
+    "ApplicationChartData": {
+      "Days": 7
+    },
+    "ApplicationData": {
+      "Days": 7
+    },
+    "ApplicationEndpoint": {
+      "Days": 7
+    },
+    "ApplicationException": {
+      "Days": 7
+    },
+    "ApplicationUsage": {
+      "Days": 7
+    },
+    "ApplicationUser": {
+      "Days": 7
+    },
+    "HttpRefererDestination": {
+      "Days": 1
+    },
+    "HttpRefererSource": {
+      "Days": 7
+    },
+    "RequestLog": [
+      {
+        "StatusCodeLt": 400,
+        "Days": 2
+      },
+      {
+        "StatusCodeLt": 500,
+        "Days": 4
+      },
+      {
+        "StatusCodeLt": 600,
+        "Days": 6
+      }
+    ]
+  },
+  "ApplicationSettings": {
+    "DeleteApplicationDataByExpiryDate": {
+      "TriggerIntervalInMinutes": 180
+    },
+    "ProcessQueues": {
+      "TriggerIntervalInSeconds": 10,
+      "Take": 50
+    },
+    "ProcessAlerts": {
+      "TriggerIntervalInSeconds": 10
+    }
+  }
+}
