@@ -17,7 +17,7 @@ KissLog server artifacts can be downloaded from here: <br/>
 <https://github.com/KissLog-net/KissLog-server/releases>
 
 Installation and configuration guide can be found here: <br/>
-[https://kisslog.net/Docs/on-premises.index.html](https://kisslog.net/Docs/on-premises.index.html).
+[https://kisslog.net/Docs/on-premises.index.html](https://kisslog.net/Docs/on-premises.index.html)
 
 ### Latest versions
 
