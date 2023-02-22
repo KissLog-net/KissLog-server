@@ -1,5 +1,5 @@
 {
-  "KissLogBackend.BasicAuth.Password": "_This_Password_Should_Be_Replaced_",
+  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
   "Database": {
@@ -42,13 +42,11 @@
         "(?si)^application/x-javascript",
         "(?si)^text/javascript",
         "(?si)^text/ecmascript",
-
         "(?si)^text/css",
         "(?si)^image/",
         "(?si)^audio/",
         "(?si)^video/",
         "(?si)^application/ogg",
-
         "(?si)^application/font-",
         "(?si)^application/x-font-",
         "(?si)^application/vnd-"
@@ -58,7 +56,9 @@
       "IsEnabled": true,
       "ObfuscateInputStream": false,
       "Placeholder": "<obfuscated>",
-      "Patterns": [ "(?si)pass" ]
+      "Patterns": [
+        "(?si)pass"
+      ]
     },
     "Truncate": {
       "Files": {
@@ -134,10 +134,34 @@
     }
   },
   "UrlTokenization": {
-    "IgnoreTokenizationUrlPathPatterns": [ "(?si)^\/[0-9]+$" ],
+    "IgnoreTokenizationUrlPathPatterns": [
+      "(?si)^/[0-9]+$"
+    ],
     "PathComponentTokenization": {
-      "Characters": [ "%", " ", ":", ",", ";", "+", "%", "&", "#", "(", ")", "@", "=", "<", ">", "{", "}", "\"", "'" ],
-      "Patterns": [ "(?si)(?:\\D*\\d){3}" ]
+      "Characters": [
+        "%",
+        " ",
+        ":",
+        ",",
+        ";",
+        "+",
+        "%",
+        "&",
+        "#",
+        "(",
+        ")",
+        "@",
+        "=",
+        "<",
+        ">",
+        "{",
+        "}",
+        "\"",
+        "'"
+      ],
+      "Patterns": [
+        "(?si)(?:\\D*\\d){3}"
+      ]
     }
   },
   "TimeToLive": {

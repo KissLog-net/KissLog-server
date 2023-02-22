@@ -1,7 +1,7 @@
 {
   "ApplicationName": "KissLog",
-  "StaticResourcesVersion": "4.0.0-rc1",
-  "KissLogBackend.BasicAuth.Password": "_This_Password_Should_Be_Replaced_",
+  "StaticResourcesVersion": "4.0.0",
+  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLog.License": "",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
@@ -17,12 +17,11 @@
       "IsPersistentFixedValue": null,
       "ExpireInMinutes": 10080
     },
-    "ExternalIdentityProviders": {
-    }
+    "ExternalIdentityProviders": {}
   },
   "Smtp": {
     "Host": "smtp.sendgrid.net",
-    "Port": "587",
+    "Port": 587,
     "UserName": "",
     "Password": "",
     "EnableSsl": false,
@@ -38,7 +37,7 @@
       "ValidForSeconds": 7200
     },
     "Applications": {
-      "LoadHowMany": "6"
+      "LoadHowMany": 6
     },
     "Dashboard": {
       "ShowReferringSites": true
