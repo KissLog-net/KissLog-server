@@ -1,0 +1,47 @@
+{
+  "ApplicationName": "KissLog",
+  "StaticResourcesVersion": "4.0.0-rc2",
+  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
+  "KissLog.License": "",
+  "KissLogBackendUrl": "http://kisslog-backend.your_domain.com",
+  "KissLogFrontendUrl": "http://kisslog-frontend.your_domain.com",
+  "EnableHeadersForwarding": false,
+  "MediaDirectoryPath": "",
+  "Database": {
+    "Provider": "MySql",
+    "ConnectionString": "server=localhost;port=3306;database=KissLog_Frontend;uid=_user_;password=_db_pass_;Charset=utf8;"
+  },
+  "Authorization": {
+    "DefaultEmailDomain": "kisslog.net",
+    "HS256Secret": "_ChangeThis_4H3Q935LLRG5TEPNVUYOQPRS0SXLT3ML_",
+    "SessionCookie": {
+      "IsPersistentFixedValue": null,
+      "ExpireInMinutes": 10080
+    },
+    "ExternalIdentityProviders": {}
+  },
+  "Smtp": {
+    "Host": "smtp.sendgrid.net",
+    "Port": 587,
+    "UserName": "",
+    "Password": "",
+    "EnableSsl": false,
+    "From": {
+      "Address": "support@kisslog.net",
+      "DisplayName": "KissLog"
+    }
+  },
+  "UserInterface": {
+    "ForceAvatarSrc": null,
+    "CreatePermalinkWithAnonymousAccess": {
+      "IsEnabled": true,
+      "ValidForSeconds": 7200
+    },
+    "Applications": {
+      "LoadHowMany": 6
+    },
+    "Dashboard": {
+      "ShowReferringSites": true
+    }
+  }
+}
