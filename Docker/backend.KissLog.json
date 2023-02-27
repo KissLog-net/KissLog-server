@@ -169,31 +169,31 @@
       "Days": 30
     },
     "ApplicationAlert": {
-      "Days": 7
+      "Days": 30
     },
     "ApplicationChartData": {
-      "Days": 7
+      "Days": 30
     },
     "ApplicationData": {
-      "Days": 7
+      "Days": 30
     },
     "ApplicationEndpoint": {
-      "Days": 7
+      "Days": 30
     },
     "ApplicationException": {
-      "Days": 7
+      "Days": 30
     },
     "ApplicationUsage": {
-      "Days": 7
+      "Days": 180
     },
     "ApplicationUser": {
-      "Days": 7
+      "Days": 30
     },
     "HttpRefererDestination": {
-      "Days": 1
+      "Days": 30
     },
     "HttpRefererSource": {
-      "Days": 7
+      "Days": 30
     },
     "RequestLog": [
       {
