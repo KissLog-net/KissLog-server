@@ -19,7 +19,7 @@ services:
       - "mongodb"
 
   frontend:
-    image: catalingavan/kisslog.frontend:4.0.0
+    image: catalingavan/kisslog.frontend:5.0.0-rc1
     container_name: kisslog.frontend.dev
     restart: unless-stopped
     volumes:

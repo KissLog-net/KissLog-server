@@ -1,10 +1,11 @@
 {
   "ApplicationName": "KissLog",
-  "StaticResourcesVersion": "4.0.0",
+  "StaticResourcesVersion": "5.0.0-rc1",
   "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLog.License": "",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
+  "EnableHeadersForwarding": false,
   "MediaDirectoryPath": "",
   "Database": {
     "Provider": "MySql",
