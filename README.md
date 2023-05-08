@@ -27,12 +27,12 @@ Installation and configuration guide can be found here: <br/>
 
 ### Latest versions
 
-[KissLog.Frontend-v5.0.0-rc1](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Frontend-v5.0.0-rc1)
+[KissLog.Frontend-v5.0.0-rc2](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Frontend-v5.0.0-rc2)
 
 [KissLog.Backend-v5.0.0-rc1](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Backend-v5.0.0-rc1)
 
 ```none
-docker pull catalingavan/kisslog.frontend:5.0.0-rc1
+docker pull catalingavan/kisslog.frontend:5.0.0-rc2
 docker pull catalingavan/kisslog.backend:5.0.0-rc1
 ```
 

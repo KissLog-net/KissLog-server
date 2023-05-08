@@ -1,6 +1,6 @@
 {
   "ApplicationName": "KissLog",
-  "StaticResourcesVersion": "5.0.0-rc1",
+  "StaticResourcesVersion": "5.0.0-rc2",
   "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLog.License": "",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
