@@ -7,7 +7,7 @@ networks:
 
 services:
   backend:
-    image: catalingavan/kisslog.backend:5.2.0-subscription02
+    image: catalingavan/kisslog.backend:5.1.0
     container_name: kisslog.backend.dev
     restart: unless-stopped
     volumes:
@@ -19,7 +19,7 @@ services:
       - "mongodb"
 
   frontend:
-    image: catalingavan/kisslog.frontend:5.2.0-subscription02
+    image: catalingavan/kisslog.frontend:5.0.0
     container_name: kisslog.frontend.dev
     restart: unless-stopped
     volumes:
