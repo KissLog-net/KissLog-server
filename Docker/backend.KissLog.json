@@ -121,7 +121,7 @@
     "Throttle": {
       "Rules": [
         {
-          "IsEnabled": false,
+          "IsEnabled": true,
           "Limits": [
             {
               "StatusCodeLt": 600,
