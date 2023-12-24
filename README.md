@@ -27,7 +27,7 @@ Installation and configuration guide can be found here: <br/>
 
 ### Latest versions
 
-[KissLog.Frontend-v5.2.0-subscription02](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Frontend-v5.0.0)
+[KissLog.Frontend-v5.0.0](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Frontend-v5.0.0)
 
 [KissLog.Backend-v5.3.0](https://github.com/KissLog-net/KissLog-server/releases/tag/KissLog.Backend-v5.3.0)
 
