@@ -6,7 +6,8 @@
     "Provider": "MongoDb",
     "MongoDb": {
       "ConnectionString": "mongodb://kisslog.mongodb.dev:27017",
-      "DatabaseName": "KissLogDev"
+      "DatabaseName": "KissLogDev",
+      "CreateRequestLogTextIndex": false
     }
   },
   "Files": {
@@ -61,6 +62,7 @@
       ]
     },
     "Truncate": {
+      "MaximumDocumentSizeInBytes": 15360,
       "Files": {
         "Limit": 6
       },

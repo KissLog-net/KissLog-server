@@ -6,7 +6,8 @@
     "Provider": "MongoDb",
     "MongoDb": {
       "ConnectionString": "mongodb://localhost:27017",
-      "DatabaseName": "KissLog"
+      "DatabaseName": "KissLog",
+      "CreateRequestLogTextIndex": false
     },
     "AzureCosmosDb": {
       "ApplicationRegion": "West Europe",
@@ -69,6 +70,7 @@
       ]
     },
     "Truncate": {
+      "MaximumDocumentSizeInBytes": 15360,
       "Files": {
         "Limit": 6
       },
