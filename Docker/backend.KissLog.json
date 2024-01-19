@@ -62,7 +62,7 @@
       ]
     },
     "Truncate": {
-      "MaximumDocumentSizeInBytes": 15360,
+      "MaximumDocumentSizeInBytes2": 15360,
       "Files": {
         "Limit": 6
       },
@@ -211,6 +211,9 @@
         "Days": 6
       }
     ]
+  },
+  "UserAgentParser": {
+    "Provider": "DeviceDetectorNet"
   },
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
