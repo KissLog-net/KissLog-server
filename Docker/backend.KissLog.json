@@ -62,7 +62,7 @@
       ]
     },
     "Truncate": {
-      "MaximumDocumentSizeInBytes2": 15360,
+      "MaximumDocumentSizeInBytes": null,
       "Files": {
         "Limit": 6
       },
