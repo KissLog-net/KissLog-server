@@ -6,8 +6,7 @@
     "Provider": "MongoDb",
     "MongoDb": {
       "ConnectionString": "mongodb://kisslog.mongodb.dev:27017",
-      "DatabaseName": "KissLogDev",
-      "CreateRequestLogTextIndex": false
+      "DatabaseName": "KissLogDev"
     }
   },
   "Files": {
@@ -62,7 +61,6 @@
       ]
     },
     "Truncate": {
-      "MaximumDocumentSizeInBytes": null,
       "Files": {
         "Limit": 6
       },
@@ -123,11 +121,11 @@
     "Throttle": {
       "Rules": [
         {
-          "IsEnabled": true,
+          "IsEnabled": false,
           "Limits": [
             {
               "StatusCodeLt": 600,
-              "RequestLimit": 1,
+              "RequestLimit": 10,
               "IntervalInSeconds": 1
             }
           ]
@@ -212,9 +210,7 @@
       }
     ]
   },
-  "UserAgentParser": {
-    "Provider": "DeviceDetectorNet"
-  },
+  "UserAgentParser": null,
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180

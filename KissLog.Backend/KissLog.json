@@ -6,8 +6,7 @@
     "Provider": "MongoDb",
     "MongoDb": {
       "ConnectionString": "mongodb://localhost:27017",
-      "DatabaseName": "KissLog",
-      "CreateRequestLogTextIndex": false
+      "DatabaseName": "KissLog"
     },
     "AzureCosmosDb": {
       "ApplicationRegion": "West Europe",
@@ -70,7 +69,6 @@
       ]
     },
     "Truncate": {
-      "MaximumDocumentSizeInBytes": null,
       "Files": {
         "Limit": 6
       },
@@ -131,11 +129,11 @@
     "Throttle": {
       "Rules": [
         {
-          "IsEnabled": true,
+          "IsEnabled": false,
           "Limits": [
             {
               "StatusCodeLt": 600,
-              "RequestLimit": 1,
+              "RequestLimit": 10,
               "IntervalInSeconds": 1
             }
           ]
@@ -220,9 +218,7 @@
       }
     ]
   },
-  "UserAgentParser": {
-    "Provider": "DeviceDetectorNet"
-  },
+  "UserAgentParser": null,
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180
