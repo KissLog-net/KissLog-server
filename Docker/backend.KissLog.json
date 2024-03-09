@@ -1,12 +1,13 @@
 {
-  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
+  "KissLogFrontend.BasicAuth.Password": "_KissLogFrontend_authorization_password_",
+  "KissLogBackend.BasicAuth.Password": "_KissLogBackend_authorization_password_",
   "Database": {
     "Provider": "MongoDb",
     "MongoDb": {
-      "ConnectionString": "mongodb://kisslog.mongodb.dev:27017",
-      "DatabaseName": "KissLogDev"
+      "ConnectionString": "mongodb://kisslog.mongodb.dev:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+      "DatabaseName": "KissLogBackend"
     }
   },
   "Files": {
@@ -14,6 +15,7 @@
     "MaximumFileSizeInBytes": 2097152
   },
   "CreateRequestLog": {
+    "ValidateApplicationKeys": true,
     "SaveInputStreamAsFileIfLengthGte": 5000,
     "Ignore": {
       "UrlPathPatterns": [
@@ -57,7 +59,8 @@
       "ObfuscateInputStream": false,
       "Placeholder": "<obfuscated>",
       "Patterns": [
-        "(?si)pass"
+        "(?si)pass",
+        "(?si)auth"
       ]
     },
     "Truncate": {
@@ -210,7 +213,16 @@
       }
     ]
   },
-  "UserAgentParser": null,
+  "UserAgentParserProvider": null,
+  "KissLogFrontend": {
+    "Database": {
+      "Provider": "MongoDb",
+      "MongoDb": {
+        "ConnectionString": "mongodb://kisslog.mongodb.dev:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+        "DatabaseName": "KissLogFrontend"
+      }
+    }
+  },
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180

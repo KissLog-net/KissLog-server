@@ -1,17 +1,18 @@
 {
-  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
   "KissLogBackendUrl": "http://kisslog-backend.your_domain.com",
   "KissLogFrontendUrl": "http://kisslog-frontend.your_domain.com",
+  "KissLogFrontend.BasicAuth.Password": "_KissLogFrontend_authorization_password_",
+  "KissLogBackend.BasicAuth.Password": "_KissLogBackend_authorization_password_",
   "Database": {
     "Provider": "MongoDb",
     "MongoDb": {
-      "ConnectionString": "mongodb://localhost:27017",
-      "DatabaseName": "KissLog"
+      "ConnectionString": "mongodb://localhost:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+      "DatabaseName": "KissLogBackend"
     },
     "AzureCosmosDb": {
       "ApplicationRegion": "West Europe",
       "ConnectionString": "https://cosmos-db-name.documents.azure.com:443/;AccountKey=_accountKeyValue_;",
-      "DatabaseName": "KissLog"
+      "DatabaseName": "KissLogBackend"
     }
   },
   "Files": {
@@ -22,6 +23,7 @@
     }
   },
   "CreateRequestLog": {
+    "ValidateApplicationKeys": true,
     "SaveInputStreamAsFileIfLengthGte": 5000,
     "Ignore": {
       "UrlPathPatterns": [
@@ -65,7 +67,8 @@
       "ObfuscateInputStream": false,
       "Placeholder": "<obfuscated>",
       "Patterns": [
-        "(?si)pass"
+        "(?si)pass",
+        "(?si)auth"
       ]
     },
     "Truncate": {
@@ -218,7 +221,22 @@
       }
     ]
   },
-  "UserAgentParser": null,
+  "UserAgentParserProvider": null,
+  "KissLogFrontend": {
+    "Database": {
+      "Provider": "MongoDb",
+      "MySql": {
+        "ConnectionString": "server=localhost;port=3306;database=KissLogFrontend;uid=<replace_user>;password=<replace_password>;Charset=utf8;"
+      },
+      "SqlServer": {
+        "ConnectionString": "Server=localhost;Database=KissLogFrontend;User ID=<replace_user>;Password=<replace_password>;TrustServerCertificate=True;"
+      },
+      "MongoDb": {
+        "ConnectionString": "mongodb://localhost:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+        "DatabaseName": "KissLogFrontend"
+      }
+    }
+  },
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180
