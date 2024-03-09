@@ -2,8 +2,8 @@
 
 ## About
 
-KissLog server is a logging, exceptions tracking and APM server. <br/>
-It provides a user-friendly web interface for viewing and analyzing the data in real time.
+KissLog is a logging, exceptions tracking and Application Performance Monitoring server. <br/>
+It provides a powerful and easy to use user-interface, allowing for viewing and analyzing the data in real time.
 
 KissLog server ingests data via REST interfaces, making it compatible with any programming language and platform.
 
@@ -15,7 +15,7 @@ KissLog server ingests data via REST interfaces, making it compatible with any p
 
 - Built on .NET6
 - Working on Windows, Linux and Docker
-- Uses MongoDB 6.0 when hosted on IIS or Azure Cosmos DB when hosted on Microsoft Azure
+- Uses MongoDB 6.0 or Azure Cosmos DB (as it can be fully hosted on Microsoft Azure)
 
 ## Artifacts
 
