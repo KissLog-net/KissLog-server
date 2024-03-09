@@ -22,6 +22,22 @@
       "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=storagename;AccountKey=_accountKeyValue_;EndpointSuffix=core.windows.net"
     }
   },
+  "UserAgentParserProvider": null,
+  "KissLogFrontend": {
+    "Database": {
+      "Provider": "MongoDb",
+      "MySql": {
+        "ConnectionString": "server=localhost;port=3306;database=KissLogFrontend;uid=<replace_user>;password=<replace_password>;Charset=utf8;"
+      },
+      "SqlServer": {
+        "ConnectionString": "Server=localhost;Database=KissLogFrontend;User ID=<replace_user>;Password=<replace_password>;TrustServerCertificate=True;"
+      },
+      "MongoDb": {
+        "ConnectionString": "mongodb://localhost:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+        "DatabaseName": "KissLogFrontend"
+      }
+    }
+  },
   "CreateRequestLog": {
     "ValidateApplicationKeys": true,
     "SaveInputStreamAsFileIfLengthGte": 5000,
@@ -220,22 +236,6 @@
         "Days": 6
       }
     ]
-  },
-  "UserAgentParserProvider": null,
-  "KissLogFrontend": {
-    "Database": {
-      "Provider": "MongoDb",
-      "MySql": {
-        "ConnectionString": "server=localhost;port=3306;database=KissLogFrontend;uid=<replace_user>;password=<replace_password>;Charset=utf8;"
-      },
-      "SqlServer": {
-        "ConnectionString": "Server=localhost;Database=KissLogFrontend;User ID=<replace_user>;Password=<replace_password>;TrustServerCertificate=True;"
-      },
-      "MongoDb": {
-        "ConnectionString": "mongodb://localhost:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
-        "DatabaseName": "KissLogFrontend"
-      }
-    }
   },
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {

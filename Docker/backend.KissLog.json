@@ -14,6 +14,16 @@
     "Provider": "MongoDb",
     "MaximumFileSizeInBytes": 2097152
   },
+  "UserAgentParserProvider": null,
+  "KissLogFrontend": {
+    "Database": {
+      "Provider": "MongoDb",
+      "MongoDb": {
+        "ConnectionString": "mongodb://kisslog.mongodb.dev:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+        "DatabaseName": "KissLogFrontend"
+      }
+    }
+  },
   "CreateRequestLog": {
     "ValidateApplicationKeys": true,
     "SaveInputStreamAsFileIfLengthGte": 5000,
@@ -212,16 +222,6 @@
         "Days": 6
       }
     ]
-  },
-  "UserAgentParserProvider": null,
-  "KissLogFrontend": {
-    "Database": {
-      "Provider": "MongoDb",
-      "MongoDb": {
-        "ConnectionString": "mongodb://kisslog.mongodb.dev:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
-        "DatabaseName": "KissLogFrontend"
-      }
-    }
   },
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
