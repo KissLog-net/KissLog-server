@@ -2,7 +2,7 @@
 
 ## About
 
-KissLog server in a logging, exceptions tracking and APM server. <br/>
+KissLog server is a logging, exceptions tracking and APM server. <br/>
 It provides a user-friendly web interface for viewing and analyzing the data in real time.
 
 KissLog server ingests data via REST interfaces, making it compatible with any programming language and platform.
