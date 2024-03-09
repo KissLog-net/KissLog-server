@@ -2,19 +2,19 @@
 
 ## About
 
-KissLog server is an application which centralizes logs, exceptions and other related metrics produced by software applications. <br/>
+KissLog server in a logging, exceptions tracking and APM server. <br/>
 It provides a user-friendly web interface for viewing and analyzing the data in real time.
 
 KissLog server ingests data via REST interfaces, making it compatible with any programming language and platform.
 
 [kisslog.net](https://kisslog.net), the public instance of KissLog server, currently processes about 200 logs per second and a total of 50 million logs per month.
 
-.NET applications can use the [KissLog.Sdk](https://github.com/KissLog-net/KissLog.Sdk) library which automatically sends all the logs to KissLog server.
+.NET applications can use the [KissLog.Sdk](https://github.com/KissLog-net/KissLog.Sdk) library which automatically sends all the logs and metrics to KissLog server.
 
 ### Technology
 
-- Built on .NET 6.0 framework
-- Working on Microsoft, Linux and Docker
+- Built on .NET6
+- Working on Windows, Linux and Docker
 - Uses MongoDB 6.0 when hosted on IIS or Azure Cosmos DB when hosted on Microsoft Azure
 
 ## Artifacts
