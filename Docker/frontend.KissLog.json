@@ -1,6 +1,6 @@
 {
-  "KissLogFrontendDomain": "your_domain.com",
-  "StaticResourcesVersion": "6.0.0-beta4",
+  "KissLogFrontendDomain": "kisslog.dev",
+  "StaticResourcesVersion": "6.0.0-beta5",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
   "KissLogFrontend.BasicAuth.Password": "_KissLogFrontend_authorization_password_",
