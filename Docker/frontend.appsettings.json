@@ -6,7 +6,6 @@
       "Microsoft.Hosting.Lifetime": "Warning"
     }
   },
-  "ApplicationType": "OnPremises",
   "AllowedHosts": "*",
   "Kestrel": {
     "EndPoints": {
