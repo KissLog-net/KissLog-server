@@ -18,7 +18,7 @@ After all the services have been created, you can access the applications on the
 To authenticate, use the following token:
 
 ```none
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.FI5EFsgHo6MvkU7UXyu0wK6ZfpKA3y2vlVfmwFNEyMc@your.name.here
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.HP79qro7bvfH7BneUy5jB9Owc_5D2UavFDulRETAl9E
 ```
 
 To destroy the services, use `docker-compose down` command.
