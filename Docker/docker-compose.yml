@@ -29,7 +29,6 @@ services:
       - "44080:80"
     links:
       - "backend"
-      - "mariadb"
 
   mongodb:
     image: mongo:6.0.4
@@ -39,18 +38,7 @@ services:
       - mongo-data:/data/db
       - mongo-config:/data/configdb
 
-  mariadb:
-    image: mariadb:10.8
-    container_name: kisslog.mariadb.dev
-    restart: unless-stopped
-    volumes:
-      - mariadb-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: pass
-      MYSQL_DATABASE: KissLog_Frontend_Dev
-
 volumes:
-  mariadb-data:
   mongo-data:
   mongo-config:
 
