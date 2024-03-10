@@ -15,7 +15,7 @@ KissLog server ingests data via REST interfaces, making it compatible with any p
 
 - Built on .NET6
 - Working on Windows, Linux and Docker
-- Uses MongoDB 6.0 or Azure Cosmos DB (as it can be fully hosted on Microsoft Azure)
+- Uses MongoDB 6.0 or Azure Cosmos DB (as it can be hosted on Microsoft Azure)
 
 ## Artifacts
 
