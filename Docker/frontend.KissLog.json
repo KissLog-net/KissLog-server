@@ -1,47 +1,29 @@
 {
-  "ApplicationName": "KissLog",
-  "StaticResourcesVersion": "5.2.0-subscription02",
-  "KissLogBackend.BasicAuth.Password": "_this_password_should_be_replaced_",
-  "KissLog.License": "",
+  "KissLogFrontendDomain": "your_domain.com",
+  "StaticResourcesVersion": "6.0.0-beta3",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
-  "EnableHeadersForwarding": false,
-  "MediaDirectoryPath": "",
+  "KissLogFrontend.BasicAuth.Password": "_KissLogFrontend_authorization_password_",
+  "KissLogBackend.BasicAuth.Password": "_KissLogBackend_authorization_password_",
+  "KissLog.License": "",
   "Database": {
-    "Provider": "MySql",
-    "ConnectionString": "server=kisslog.mariadb.dev;port=3306;database=KissLog_Frontend_Dev;uid=root;password=pass;Charset=utf8;"
-  },
-  "Authorization": {
-    "DefaultEmailDomain": "kisslog.net",
-    "HS256Secret": "_ChangeThis_4H3Q935LLRG5TEPNVUYOQPRS0SXLT3ML_",
-    "SessionCookie": {
-      "IsPersistentFixedValue": null,
-      "ExpireInMinutes": 10080
-    },
-    "ExternalIdentityProviders": {}
+    "Provider": "MongoDb",
+    "MongoDb": {
+      "ConnectionString": "mongodb://kisslog.mongodb.dev:27017?socketTimeoutMS=5000&connectTimeoutMS=5000",
+      "DatabaseName": "KissLogFrontend"
+    }
   },
   "Smtp": {
     "Host": "smtp.sendgrid.net",
     "Port": 587,
     "UserName": "",
     "Password": "",
-    "EnableSsl": false,
-    "From": {
-      "Address": "support@kisslog.net",
-      "DisplayName": "KissLog"
-    }
+    "EnableSsl": false
   },
   "UserInterface": {
-    "ForceAvatarSrc": null,
-    "CreatePermalinkWithAnonymousAccess": {
-      "IsEnabled": true,
-      "ValidForSeconds": 7200
-    },
-    "Applications": {
-      "LoadHowMany": 6
-    },
-    "Dashboard": {
-      "ShowReferringSites": true
-    }
+    "NumberOfApplicationsToPreloadOnTheDashboardPage": 6
+  },
+  "Authorization": {
+    "HS256Secret": "00000000-0000-0000-0000-000000000000-00000000-0000-0000-0000-000000000000"
   }
 }
