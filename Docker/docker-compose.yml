@@ -7,7 +7,7 @@ networks:
 
 services:
   backend:
-    image: catalingavan/kisslog.backend:6.0.0-beta2
+    image: catalingavan/kisslog.backend:6.0.0-beta3
     container_name: kisslog.backend.dev
     restart: unless-stopped
     volumes:
