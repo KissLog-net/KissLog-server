@@ -5,7 +5,7 @@ KissLog server can run as a Docker container, thanks to [Marcio](https://github.
 In this folder you will find all the necessary files.
 
 ```none
-# spawns the KissLog server and all the necesarry prerequisites
+# starts the KissLog server and all the necesarry prerequisites
 C:\KissLog-net\KissLog-server\Docker> docker-compose up
 
 # stops the KissLog server docker containers
