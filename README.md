@@ -9,12 +9,10 @@ KissLog server ingests data via REST interfaces, making it compatible with any p
 
 [kisslog.net](https://kisslog.net), the public instance of KissLog server, currently processes about 200 logs per second and a total of 50 million logs per month.
 
-.NET applications can use the [KissLog.Sdk](https://github.com/KissLog-net/KissLog.Sdk) library which automatically sends all the logs and metrics to KissLog server.
-
 ### Technology
 
 - Built on .NET6
-- Working on Windows, Linux and Docker
+- Working on Windows, Linux and [Docker](Docker/README.md)
 - Uses MongoDB 6.0 or Azure Cosmos DB (as it can be hosted on Microsoft Azure)
 
 ## Artifacts
@@ -36,7 +34,38 @@ docker pull catalingavan/kisslog.frontend:6.0.0-beta5
 docker pull catalingavan/kisslog.backend:6.0.0-beta4
 ```
 
-## Print screens
+## Saving logs
 
-![Applications dashboard](https://user-images.githubusercontent.com/39127098/221179142-87a73564-f87d-46c2-b869-4019513cc010.png)
-![Request details](https://user-images.githubusercontent.com/39127098/221179349-94676166-2f09-43f1-94d3-d272b5331086.png)
+- .NET applications can use the [KissLog.Sdk](https://github.com/KissLog-net/KissLog.Sdk) library which automatically sends all the logs and metrics to KissLog server
+
+- Submitting logs by directly consuming the REST interface
+
+```
+POST http://localhost:44088/request-logs
+{
+  "organizationId": "_OrganizationId_",
+  "applicationId": "_ApplicationId_",
+  "startedAt": "2024-03-11T14:36:31.108Z",
+  "durationInMilliseconds": 41,
+  "httpProperties": {
+    "absoluteUri": "http://localhost/catalog/createProduct?locale=en",
+    "method": "POST",
+    "response": {
+      "statusCode": 200
+    }
+  },
+  "logs": [
+    {
+      "logLevel": "Information",
+      "message": "Creating product..."
+    }
+  ]
+}
+```
+
+## User interface
+
+<table><tr><td>
+    <img alt="User interface" src="https://github.com/KissLog-net/KissLog-server/assets/39127098/8944691a-3f6e-4946-9a73-85390a867b87" />
+</td></tr></table>
+
