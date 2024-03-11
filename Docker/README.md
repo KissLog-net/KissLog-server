@@ -4,31 +4,39 @@ KissLog server can be run as a Docker application, thanks to [Marcio](https://gi
 
 In this folder you will find all the necessary files.
 
-To spawn the KissLog server and all the necessary prerequisites, use `docker-compose up` command.
-
 ```none
+# spawns the KissLog server and all the necesarry prerequisites
 C:\KissLog-net\KissLog-server\Docker> docker-compose up
-```
 
-After all the services have been created, you can access the applications on the following urls:
-
-- KissLog.Frontend: <http://localhost:44080/>
-- KissLog.Backend: <http://localhost:44088/>
-
-To authenticate, use the following token:
-
-```none
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.HP79qro7bvfH7BneUy5jB9Owc_5D2UavFDulRETAl9E
-```
-
-To destroy the services, use `docker-compose down` command.
-
-```none
+# stops the KissLog server docker containers
 C:\KissLog-net\KissLog-server\Docker> docker-compose down
+
+# Authentication token
+# > a JWT signed with the value from frontend.KissLog.json@$.Authorization.HS256Secret
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.HP79qro7bvfH7BneUy5jB9Owc_5D2UavFDulRETAl9E
+
+# KissLog.Frontend endpoint
+http://localhost:44080/
+
+# KissLog.Backend endpoint
+http://localhost:44088/
 ```
 
-![docker-compose up](https://user-images.githubusercontent.com/39127098/220664267-b6d1235b-ee25-4e6e-bd6d-f93b562ada58.png)
+```csharp
+// start sending logs to the local KissLog server 
+app.UseKissLogMiddleware(options => {
+    options.Listeners
+        .Add(new RequestLogsApiListener(
+            new Application("_OrganizationId_","_ApplicationId_"))
+            {
+                ApiUrl = "http://localhost:44088/"
+            }
+        );
+});
+```
 
-![KissLog.Frontend login](https://user-images.githubusercontent.com/39127098/220663798-87427990-8c8c-4c79-8457-9f94bcaea25b.png)
+<img width="642" alt="Login" src="https://github.com/KissLog-net/KissLog-server/assets/39127098/30b3b8bd-d7d4-4e79-9e5d-771df2f41174">
 
-![KissLog.Frontend applications](https://user-images.githubusercontent.com/39127098/220663936-745dfa57-7b11-4bbf-a937-b5a169655002.png)
+<img width="746" alt="Dashboard" src="https://github.com/KissLog-net/KissLog-server/assets/39127098/a50d654e-5a0b-4094-b328-63dad69f2e53">
+
+<img width="746" alt="Request" src="https://github.com/KissLog-net/KissLog-server/assets/39127098/21517eae-a70b-4ccc-8277-f1314a2850ac">
