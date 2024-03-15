@@ -1,6 +1,6 @@
 {
   "KissLogFrontendDomain": "kisslog.dev",
-  "StaticResourcesVersion": "6.0.0",
+  "StaticResourcesVersion": "6.0.1",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
   "KissLogFrontend.BasicAuth.Password": "_KissLogFrontend_authorization_password_",
@@ -24,6 +24,11 @@
     "NumberOfApplicationsToPreloadOnTheDashboardPage": 6
   },
   "Authorization": {
-    "HS256Secret": "00000000-0000-0000-0000-000000000000-00000000-0000-0000-0000-000000000000"
+    "HS256Secret": "00000000-0000-0000-0000-000000000000-00000000-0000-0000-0000-000000000000",
+    "AzureActiveDirectory": {
+      "ClientId": "<AD Application (client) ID>",
+      "ClientSecret": "<secret>",
+      "Authority": "https://login.microsoftonline.com/<AD Directory (tenant) ID>/v2.0/"
+    }
   }
 }
