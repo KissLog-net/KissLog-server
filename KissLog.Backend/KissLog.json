@@ -22,7 +22,6 @@
       "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=storagename;AccountKey=_accountKeyValue_;EndpointSuffix=core.windows.net"
     }
   },
-  "UserAgentParserProvider": null,
   "KissLogFrontend": {
     "Database": {
       "Provider": "MongoDb",
@@ -237,6 +236,7 @@
       }
     ]
   },
+  "UserAgentParserProvider": null,
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180

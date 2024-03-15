@@ -14,7 +14,6 @@
     "Provider": "MongoDb",
     "MaximumFileSizeInBytes": 2097152
   },
-  "UserAgentParserProvider": null,
   "KissLogFrontend": {
     "Database": {
       "Provider": "MongoDb",
@@ -223,6 +222,7 @@
       }
     ]
   },
+  "UserAgentParserProvider": null,
   "ApplicationSettings": {
     "DeleteApplicationDataByExpiryDate": {
       "TriggerIntervalInMinutes": 180
