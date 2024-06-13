@@ -1,5 +1,7 @@
 # KissLog server
 
+The application has been renamed to logBee-app, and is currently maintained on https://github.com/catalingavan/logBee-app.
+
 ## About
 
 KissLog is a logging, exceptions tracking and Application Performance Monitoring server. <br/>
