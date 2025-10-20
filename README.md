@@ -1,6 +1,7 @@
 # KissLog server
 
-The application has been renamed to logBee-app, and is currently maintained on https://github.com/catalingavan/logBee-app.
+> [!IMPORTANT]  
+> The application has been renamed to Logbee, and is currently maintained on [https://github.com/catalingavan/logbee-app](https://github.com/catalingavan/logbee-app).
 
 ## About
 
